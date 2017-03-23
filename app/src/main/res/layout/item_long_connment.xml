@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="15dp">
+   <com.facebook.drawee.view.SimpleDraweeView
+       android:id="@+id/sdv_comment_header"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:src="@mipmap/ic_launcher"
+       android:layout_marginRight="10dp"
+       app:roundAsCircle="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView android:id="@+id/tv_comment_userName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="用户名"
+               android:textColor="#000"
+               android:textSize="20sp"/>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="20dp"
+               android:layout_centerVertical="true"
+               android:clickable="true"
+               android:src="@drawable/like_seleter"/>
+           <TextView android:id="@+id/tv_comment_likeNum"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:text="2"
+               android:layout_marginRight="5dp"
+               android:layout_alignParentRight="true"/>
+       </RelativeLayout>
+        <TextView android:id="@+id/tv_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""/>
+        <TextView android:id="@+id/tv_comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="03-14 13:17"/>
+    </LinearLayout>
+
+</LinearLayout>

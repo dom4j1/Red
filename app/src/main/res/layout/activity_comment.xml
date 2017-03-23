@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="6dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_num_Lcomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y60"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/y15"
+                    android:textColor="#000"
+                    android:text="0 条长评" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d8d8d8"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_long_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <include android:id="@+id/il"
+                    layout="@layout/item_longcomment" />
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d8d8d8"
+                    />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_num_Scomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y60"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/y15"
+                    android:textColor="#000"
+                    android:text="0 条短评" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/comment_icon_fold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/y20"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d8d8d8"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rl_short_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

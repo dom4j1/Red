@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_toast_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@mipmap/praise"
+    android:maxWidth="200dp"
+    android:gravity="center"
+    android:padding="8dp"
+    android:textColor="#fff"
+    android:textSize="16sp"
+    android:background="@drawable/toast_image">
+
+</TextView>

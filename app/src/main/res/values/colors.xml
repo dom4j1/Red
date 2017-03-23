@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3366CC</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="toast_bg">#dddfe0</color>
+
+    <color name="white">#FFF</color>
+
+    <color name="lucency">#00000000</color>
+
+    <color name="black">#000000</color>
+    <color name="lucencyblack">#c1000000</color>
+
+    <!-- 亮灰色 -->
+    <color name="lightgrey">#d3d3d3</color>
+
+    <color name="gray">#808080</color>
+
+    <color name="startpage_blue" >#48aee4</color>
+    <color name="RED">#F00</color>
+</resources>

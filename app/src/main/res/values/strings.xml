@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Red</string>
+    <string name="home">首页</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="classify">主题章节</string>
+    <string name="about">关于Red</string>
+    <string name="a1">本项目已开源</string>
+</resources>
