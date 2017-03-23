@@ -14,6 +14,9 @@
 
     </style>
 
+    <style name="MenuTextStyle">
+        <item name="android:textSize">17sp</item>
+    </style>
 
 
     <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">

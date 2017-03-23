@@ -2,7 +2,10 @@ package com.dom.red.ui.activity;
 
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dom.red.R;
 import com.dom.red.app.App;
@@ -37,7 +41,7 @@ import butterknife.BindView;
 
 public class MainActivity extends BaseActivity<MainPresenter>
         implements MainContract.View, Toolbar.OnMenuItemClickListener,RefreshRecyclerView.OnRefresh2Lisenter,
-        ViewHolder.OnItemClickLisenter {
+        ViewHolder.OnItemClickLisenter,NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.tb_home)
     Toolbar mToolBar;
@@ -69,6 +73,12 @@ public class MainActivity extends BaseActivity<MainPresenter>
     protected void initEventAndData() {
         mToolBar.setTitle(R.string.home);
         setSupportActionBar(mToolBar);
+
+        Resources resource = (Resources)getBaseContext().getResources();
+        ColorStateList csl = (ColorStateList)resource.getColorStateList(R.color.seleter);
+        mNavigationView.setItemTextColor(csl);
+
+        mNavigationView.setNavigationItemSelectedListener(this);
 
         mList = new ArrayList<>();
 
@@ -196,4 +206,23 @@ public class MainActivity extends BaseActivity<MainPresenter>
         startActivity(intent);
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item_1:
+               startActivity(new Intent(this,MainActivity.class));
+                break;
+            case R.id.item_2:
+                Toast.makeText(this,"当前暂无最新版本",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.item_3:
+                startActivity(new Intent(this,AboutRedActivity.class));
+                break;
+            case R.id.item_4:
+                Toast.makeText(this,"一介书生",Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+        return true;
+    }
 }
