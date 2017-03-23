@@ -40,7 +40,8 @@
             android:id="@+id/nv_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="left" />
+            android:layout_gravity="left"
+            app:headerLayout="@layout/item_main_left"/>
     </android.support.v4.widget.DrawerLayout>
 
 

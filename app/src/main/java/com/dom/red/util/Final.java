@@ -15,4 +15,6 @@ public class Final {
     public static final String NUM = "num";
 
     public static final String ISIMAGE = "isImage";
+
+    public static final String URL = "url";
 }
