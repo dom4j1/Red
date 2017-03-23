@@ -8,6 +8,14 @@
             android:title="首页" />
     </group>
 
+    <group android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_6"
+            android:title="主题日报" />
+    </group>
+
+
     <group android:id="@+id/group2"
         android:checkableBehavior="single">
         <item

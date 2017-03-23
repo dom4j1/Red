@@ -221,7 +221,9 @@ public class MainActivity extends BaseActivity<MainPresenter>
             case R.id.item_4:
                 Toast.makeText(this,"一介书生",Toast.LENGTH_SHORT).show();
                 break;
-
+            case R.id.item_6:
+                startActivity(new Intent(this,ThemeActivity.class));
+                break;
         }
         return true;
     }
