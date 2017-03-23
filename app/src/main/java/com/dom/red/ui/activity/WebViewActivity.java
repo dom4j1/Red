@@ -87,14 +87,10 @@ public class WebViewActivity extends SimpleActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if(keyCode==KeyEvent.KEYCODE_BACK) {
-//            if(mWebView.canGoBack()) {//当webview不是处于第一页面时，返回上一个页面
-//                mWebView.goBack();
-//                return true;
-//            }
-//            else {//当webview处于第一页面时,直接退出程序
-//                System.exit(0);
-//            }
-            finish();
+            if(mWebView.canGoBack()) {//当webview不是处于第一页面时，返回上一个页面
+                mWebView.goBack();
+                return true;
+            }
         }
         return super.onKeyDown(keyCode, event);
     }

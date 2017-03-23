@@ -1,6 +1,7 @@
 package com.dom.red.ui.activity;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -10,7 +11,9 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -211,6 +214,7 @@ public class MainActivity extends BaseActivity<MainPresenter>
         switch (item.getItemId()){
             case R.id.item_1:
                startActivity(new Intent(this,MainActivity.class));
+                finish();
                 break;
             case R.id.item_2:
                 Toast.makeText(this,"当前暂无最新版本",Toast.LENGTH_SHORT).show();
@@ -227,4 +231,34 @@ public class MainActivity extends BaseActivity<MainPresenter>
         }
         return true;
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK) {
+            showExitDialog();
+        }
+        return true;
+    }
+
+    private void showExitDialog() {
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("确定要退出RED么 ?")
+                .setCancelable(true)
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                          dialog.dismiss();
+                    }
+                })
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ((App)getApplication()).exitApp();
+                    }
+                })
+                .create();
+        dialog.show();
+
+    }
+
 }
