@@ -21,6 +21,7 @@
 * 使用Fresco+Glide做图片的缓存加载处理<br>
 * 使用X5WebView替换原生webView,做数据的展示<br>
 * 使用RecyclerView做列表数据展示<br>
+* 使用沉浸式布局做阅览,页面更美观
 * 使用通用Adapter做RecyclerView适配器,告别创建adapter的痛苦<br>
 * 详情请下载源码阅读
  
