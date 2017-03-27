@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RED"
+            android:text="J.Red"
             android:textSize="30sp"
             android:layout_below="@+id/rl_background"
             android:textStyle="bold"
