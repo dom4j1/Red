@@ -3,15 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/content_share"
+        android:title=""
+        android:icon="@mipmap/ic_toolbar_share"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/content_content"
         android:title=""
         app:actionLayout="@layout/item_menu_message"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/content_like"
         android:title=""
         app:actionLayout="@layout/item_menu_like"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
 </menu>

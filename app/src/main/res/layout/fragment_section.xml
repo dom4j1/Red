@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dom.red.ui.main.widget.RefreshRecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/section_refreshView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</com.dom.red.ui.main.widget.RefreshRecyclerView>

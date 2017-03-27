@@ -1,36 +1,37 @@
 package com.dom.red.model.http.help;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import com.dom.red.app.App;
-import com.dom.red.model.bean.DetailBean;
-import com.dom.red.model.bean.ExtraInfo;
-import com.dom.red.model.bean.HomeListBean;
-import com.dom.red.model.bean.LongCommentBean;
-import com.dom.red.model.bean.ShortCommentBean;
-import com.dom.red.model.bean.ThemeList;
-import com.dom.red.model.bean.ThemeListBean;
+import com.dom.red.model.bean.zhihu.HotListBean;
+import com.dom.red.model.bean.zhihu.SectionChildListBean;
+import com.dom.red.model.bean.gank.ClassifyList;
+import com.dom.red.model.bean.gank.MeiziBean;
+import com.dom.red.model.bean.zhihu.DetailBean;
+import com.dom.red.model.bean.zhihu.ExtraInfo;
+import com.dom.red.model.bean.zhihu.HomeListBean;
+import com.dom.red.model.bean.zhihu.LongCommentBean;
+import com.dom.red.model.bean.zhihu.SectionBean;
+import com.dom.red.model.bean.zhihu.ShortCommentBean;
+import com.dom.red.model.bean.zhihu.ThemeList;
+import com.dom.red.model.bean.zhihu.ThemeListBean;
+import com.dom.red.model.http.api.GankApi;
 import com.dom.red.model.http.api.ZhiHuApi;
-import com.dom.red.util.Final;
-import com.dom.red.util.LogUtil;
+import com.dom.red.model.http.response.GankHttpResult;
 import com.dom.red.util.NewWorkUtil;
-import com.dom.red.util.SpUtil;
-import com.dom.red.util.ToastUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
-import io.reactivex.android.BuildConfig;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -42,6 +43,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitHelper {
     private static OkHttpClient mOkHttpClient = null;
     private static ZhiHuApi mZhiHuApi = null;
+    private static GankApi mGankApi = null;
 
     public RetrofitHelper(){
         init();
@@ -50,6 +52,7 @@ public class RetrofitHelper {
     private void init(){
         initOkHttp();
         mZhiHuApi = getApiService(ZhiHuApi.HOST,ZhiHuApi.class);
+        mGankApi = getApiService(GankApi.Host,GankApi.class);
     }
 
     private void initOkHttp() {
@@ -104,7 +107,7 @@ public class RetrofitHelper {
         builder.addInterceptor(cacheInterceptor);
         builder.cache(cache);
         //设置超时
-        builder.connectTimeout(20, TimeUnit.SECONDS);
+        builder.connectTimeout(5, TimeUnit.SECONDS);
         builder.readTimeout(20,TimeUnit.SECONDS);
         builder.writeTimeout(20,TimeUnit.SECONDS);
         //错误重连
@@ -138,5 +141,15 @@ public class RetrofitHelper {
     public Observable<ShortCommentBean> getShortComment(int id){return mZhiHuApi.getShortComment(id); }
 
     public Observable<ThemeList> getThemeList(int id){return mZhiHuApi.getThemeList(id); }
+
+    public Observable<GankHttpResult<List<ClassifyList>>> getClassList(String mode, int num, int page){return mGankApi.getClassList(mode,num,page);}
+
+    public Observable<GankHttpResult<List<MeiziBean>>> getMeiziList(String mode, int num, int page){return mGankApi.getMeiziList(mode,num,page);}
+
+    public Observable<SectionBean> getSectionList(){return mZhiHuApi.getSectionList();}
+
+    public Observable<SectionChildListBean> getSectionChildList(int id){return mZhiHuApi.getSectionChildList(id);}
+
+    public Observable<HotListBean> getHotList(){return mZhiHuApi.getHotList();}
 
 }

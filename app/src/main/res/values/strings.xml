@@ -1,21 +1,29 @@
 <resources>
-    <string name="app_name">Red</string>
+    <string name="app_name">J.Red</string>
     <string name="home">首页</string>
     <string name="open">打开</string>
     <string name="close">关闭</string>
     <string name="classify">主题章节</string>
-    <string name="about">关于Red</string>
+    <string name="about">关于J.Red</string>
 
-    <string name="s1">本项目已开源 Git地址 : \n https://github.com/dom4j1/Red</string>
-    <string name="s2">特别感谢izzyleung开源的接口 Git地址 : \n https://github.com/izzyleung</string>
-    <string name="s3">Red由dom4j完成 是学习mvp + rxjava2.0 + retrofit2.0 + dagger2 的产物 是一款纯阅读的App 欢迎来Git提Issues</string>
-    <string name="s4">Red所有 API 均由 知乎（Zhihu.Inc） 提供，采取非正常手段获取。获取与共享之行为或有侵犯知乎权益的嫌疑。若被告知需停止共享与使用，本人会及时删除此页面与整个项目。</string>
-    <string name="s5">邮箱 : dom4j1464529456@163.com</string>
-    <string name="s6">QQ : 1464529456</string>
+    <string name="s1">作者 : dom4j \n Email : dom4j1464529456@163.com</string>
+    <string name="s2">项目简介 : \n出于学习的目的制作了这款资讯类的App 为了掌握最新的Android技术,如MVP,RxJava等,如果他对你有所帮助 欢迎start</string>
+    <string name="s3">Home : \n主页Api来自于知乎日报 感谢大神们的开源精神 \n(详情请访问我的GitHub,阅读README)</string>
+    <string name="s4">Gank : \n干货Api来自于代码家 感谢大神们的开源精神 \n(详情请访问我的GitHub,阅读README)</string>
+    <string name="s5">项目UI 借鉴于GeekNews 非常感谢大神的开源精神 让我受益匪浅 \n(详情请访问我的GitHub,阅读README)</string>
+    <string name="s6">如果发现「J.Red」存在Bug 欢迎访问我的GitHub提Issues 也可以邮箱联系我</string>
+    <string name="s7">最后感谢您打开「J.Red」(*^__^*)</string>
 
     <string name="c1">https://github.com/dom4j1/Red</string>
     <string name="c2">https://github.com/izzyleung</string>
     <string name="c3">mvp + rxjava2.0 + retrofit2.0 + dagger2</string>
     <string name="c4">dom4j1464529456@163.com</string>
     <string name="c5">1464529456</string>
+    <string name="share_app">发现了一款纯阅读的小app「J.Red」,  同时有很多程序员干货哦，^_^ Git地址: https://github.com/dom4j1/Red  喜欢可以帮忙点颗星呦</string>
+    <string name="share_app_to_friend">分享「Red」给朋友</string>
+    <string name="share_essay">我在Red 发现了一篇新闻 很有意思呦 你也来看看 \n </string>
+    <string name="share_essay_to_friend">分享「新闻」给朋友</string>
+    <string name="noData">暂时没有更多数据了 =￣ω￣=</string>
+    <string name="image_share">分享「妹子」给朋友</string>
+    <string name="share_desc">我在「J.Red」上发现一只妹子呦 快来看看吧 (*^__^*)</string>
 </resources>

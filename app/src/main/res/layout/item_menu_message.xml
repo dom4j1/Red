@@ -6,7 +6,7 @@
     <TextView android:id="@+id/tv_msg_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="..."
         android:textColor="#FFF"
         android:drawablePadding="5dp"
         android:textSize="20sp"

@@ -20,13 +20,14 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * Created by dom4j on 2017/3/7.
  * MVP activity的基类
  */
 
-public abstract class BaseActivity<T extends BasePresenter> extends AppCompatActivity implements BaseView{
+public abstract class BaseActivity<T extends BasePresenter> extends SupportActivity implements BaseView{
 
     @Inject
     protected T mPresenter;

@@ -1,13 +1,12 @@
 package com.dom.red.presenter;
 
 import com.dom.red.base.RxPresenter;
-import com.dom.red.model.bean.DetailBean;
-import com.dom.red.model.bean.ExtraInfo;
+import com.dom.red.model.bean.zhihu.DetailBean;
+import com.dom.red.model.bean.zhihu.ExtraInfo;
 import com.dom.red.model.http.help.RetrofitHelper;
 import com.dom.red.model.http.help.RxHelper;
 import com.dom.red.model.http.help.Subscribe2Help;
 import com.dom.red.presenter.contract.ContentContract;
-import com.dom.red.util.LogUtil;
 
 import javax.inject.Inject;
 
@@ -28,7 +27,7 @@ public class ContentPresenter extends RxPresenter<ContentContract.View> implemen
     @Override
     public void getContent(int id) {
         Observable<DetailBean> detailList = mRetrofitHelp.getDetailList(id);
-        detailList.compose(RxHelper.rxSchedulerHelper())
+        detailList.compose(RxHelper.<DetailBean>rxSchedulerHelper())
                 .subscribe(new Subscribe2Help<DetailBean>(this) {
                     @Override
                     public void onNext(DetailBean value) {
@@ -40,7 +39,7 @@ public class ContentPresenter extends RxPresenter<ContentContract.View> implemen
     @Override
     public void getNewsInfo(int id) {
         Observable<ExtraInfo> edtraInfo = mRetrofitHelp.getNewsInfo(id);
-        edtraInfo.compose(RxHelper.rxSchedulerHelper())
+        edtraInfo.compose(RxHelper.<ExtraInfo>rxSchedulerHelper())
                 .subscribe(new Subscribe2Help<ExtraInfo>(this) {
                     @Override
                     public void onNext(ExtraInfo extraInfo) {

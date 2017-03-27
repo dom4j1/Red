@@ -11,13 +11,14 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.yokeyword.fragmentation.SupportFragment;
 
 /**
  * Created by dom4j on 2017/3/7.
  * 无MVP的Fragment的基类
  */
 
-public abstract class SimpleFragment extends Fragment{
+public abstract class SimpleFragment extends SupportFragment{
 
     protected View mView;
     protected Activity mActivity;

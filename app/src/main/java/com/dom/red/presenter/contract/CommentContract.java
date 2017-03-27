@@ -2,8 +2,8 @@ package com.dom.red.presenter.contract;
 
 import com.dom.red.base.BasePresenter;
 import com.dom.red.base.BaseView;
-import com.dom.red.model.bean.LongCommentBean;
-import com.dom.red.model.bean.ShortCommentBean;
+import com.dom.red.model.bean.zhihu.LongCommentBean;
+import com.dom.red.model.bean.zhihu.ShortCommentBean;
 
 /**
  * Created by dom4j on 2017/3/13.

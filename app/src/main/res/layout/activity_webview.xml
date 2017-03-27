@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.Toolbar
@@ -13,19 +14,25 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/OverflowMenuStyle"/>
-    <ProgressBar
+    <com.daimajia.numberprogressbar.NumberProgressBar
         android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleHorizontal"
+        style="@style/NumberProgressBar_Default"
         android:layout_width="match_parent"
-        android:layout_height="3dip"
-        android:progressDrawable="@drawable/pg"
-        android:visibility="gone"
+        app:progress_reached_bar_height="2dp"
+        app:progress_text_size="0sp"
+        app:progress_text_visibility="invisible"
+        app:progress_unreached_bar_height="2dp"
         />
-
-    <WebView
-        android:id="@+id/webView"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </WebView>
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.tencent.smtt.sdk.WebView>
+    </android.support.v4.widget.NestedScrollView>
+
 
 </LinearLayout>

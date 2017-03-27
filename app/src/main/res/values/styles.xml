@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,12 +10,17 @@
 
         //沉浸状态栏
         <item name="android:windowIsTranslucent">true</item>
-        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
+
+        //ActionBarDrawerToggle设置颜色
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="actionMenuTextColor">#ffffff</item>
 
     </style>
 
     <style name="MenuTextStyle">
-        <item name="android:textSize">17sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
 
@@ -30,6 +35,9 @@
         <item name="android:dropDownHorizontalOffset">0dp</item>
         <!--菜单背景颜色-->
         <item name="android:colorBackground">@color/colorPrimary</item>
+
     </style>
+
+    <style name="customToolBarTheme" parent="Theme.AppCompat.NoActionBar"/>
 
 </resources>

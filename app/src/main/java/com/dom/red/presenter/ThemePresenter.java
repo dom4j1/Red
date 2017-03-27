@@ -1,21 +1,20 @@
 package com.dom.red.presenter;
 
-import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.dom.red.app.App;
 import com.dom.red.base.RxPresenter;
-import com.dom.red.model.bean.ThemeListBean;
+import com.dom.red.model.bean.zhihu.ThemeListBean;
 import com.dom.red.model.http.help.RetrofitHelper;
 import com.dom.red.model.http.help.RxHelper;
 import com.dom.red.model.http.help.Subscribe2Help;
 import com.dom.red.presenter.contract.ThemeContract;
-import com.dom.red.ui.Adapter.ThemeDownVp;
-import com.dom.red.ui.Adapter.ThemeTopViewPager;
-import com.dom.red.ui.activity.ThemeActivity;
-import com.dom.red.ui.fragment.ThemeFragment;
-import com.dom.red.ui.widget.ImageViewAndText;
+import com.dom.red.ui.main.adapter.ThemeDownVp;
+import com.dom.red.ui.main.adapter.ThemeTopViewPager;
+import com.dom.red.ui.zhihu.activity.ThemeActivity;
+import com.dom.red.ui.zhihu.fragment.ThemeFragment;
+import com.dom.red.ui.main.widget.ImageViewAndText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +67,8 @@ public class ThemePresenter extends RxPresenter<ThemeContract.View> implements T
         List<Fragment> fragmentList = new ArrayList<>();
         List<String> strList = new ArrayList<>();
         for(ThemeListBean.OthersBean bean : list){
-            ThemeFragment tf = new ThemeFragment(bean.getId());
+            ThemeFragment tf = new ThemeFragment();
+            tf.setId(bean.getId());
             strList.add(bean.getName());
             fragmentList.add(tf);
         }

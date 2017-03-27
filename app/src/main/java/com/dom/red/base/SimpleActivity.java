@@ -14,13 +14,14 @@ import com.dom.red.app.App;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * Created by dom4j on 2017/3/7.
  * 无MVP的Activity的基类
  */
 
-public abstract class SimpleActivity extends AppCompatActivity{
+public abstract class SimpleActivity extends SupportActivity{
 
     protected Activity mContext;
     protected Unbinder mUnBinder;

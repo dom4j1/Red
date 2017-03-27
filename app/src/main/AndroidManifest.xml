@@ -6,15 +6,21 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.WelComeActivity">
+        <activity android:name=".ui.main.activity.WelComeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,12 +28,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.MainActivity"/>
-        <activity android:name=".ui.activity.ContentActivity"/>
-        <activity android:name=".ui.activity.CommentActivity"/>
-        <activity android:name=".ui.activity.ThemeActivity" />
-        <activity android:name=".ui.activity.AboutRedActivity"/>
-        <activity android:name=".ui.activity.WebViewActivity"/>
+        <activity android:name=".ui.main.activity.MainActivity"/>
+        <activity android:name=".ui.zhihu.activity.ContentActivity"/>
+        <activity android:name=".ui.zhihu.activity.CommentActivity"/>
+        <activity android:name=".ui.zhihu.activity.ThemeActivity" />
+        <activity android:name=".ui.zhihu.activity.AboutRedActivity"/>
+        <activity android:name=".ui.zhihu.activity.WebViewActivity"/>
+        <activity android:name=".ui.gank.activity.HomeActivity"/>
+        <activity android:name=".ui.main.activity.TimeActivity"/>
+        <activity android:name=".ui.zhihu.activity.SectionActivity"/>
+        <activity android:name=".ui.gank.activity.FuliActivity"/>
+        <activity android:name=".ui.gank.activity.MeiZiActivity"/>
+        <activity android:name=".ui.gank.activity.WebVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
 
     </application>
 

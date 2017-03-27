@@ -48,4 +48,18 @@ public class ToastUtil {
           }
         mToast_image.show();
     }
+
+    public static void showError(String str) {
+        if(mToast_image == null){
+            View view  = View.inflate(App.getInstance(),R.layout.toast_image,null);
+            mImage = (TextView) view.findViewById(R.id.tv_toast_image);
+            mImage.setCompoundDrawables(null,null,null,null);
+            mToast_image = new Toast(App.getInstance());
+            mImage.setText(" " + str +" + 1");
+            mToast_image.setView(view);
+            mToast_image.setGravity(Gravity.BOTTOM,0,200);
+            mToast_image.setDuration(Toast.LENGTH_SHORT);
+        }
+        mToast_image.show();
+    }
 }

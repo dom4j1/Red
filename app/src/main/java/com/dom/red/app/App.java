@@ -7,8 +7,9 @@ import android.content.SharedPreferences;
 import com.dom.red.di.component.AppComponent;
 import com.dom.red.di.component.DaggerAppComponent;
 import com.dom.red.di.module.AppModule;
-import com.dom.red.util.Final;
+import com.dom.red.util.Constants;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.tencent.smtt.sdk.QbSdk;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -33,7 +34,8 @@ public class App extends Application{
         super.onCreate();
         Fresco.initialize(this);//初始化框架
         instance = this;
-        mSp = App.getInstance().getSharedPreferences(Final.SP, Activity.MODE_PRIVATE);
+        mSp = App.getInstance().getSharedPreferences(Constants.SP, Activity.MODE_PRIVATE);
+        QbSdk.initX5Environment(instance,null);
 
     }
 

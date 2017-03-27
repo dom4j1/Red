@@ -40,7 +40,7 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     //rxJava2.0
-    compile "io.reactivex.rxjava2:rxjava:2.x.y"
+    compile 'io.reactivex.rxjava2:rxjava:2.x.y'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     //dagger2
     compile 'com.google.dagger:dagger:2.4'
@@ -56,4 +56,21 @@ dependencies {
     //动画
     compile 'com.fancy.library:pathanim:1.0.1'
     compile 'com.android.support:cardview-v7:25.2.0'
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile files('libs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
+    //progressbar
+    compile 'com.daimajia.numberprogressbar:library:1.2@aar'
+    //support
+    compile 'me.yokeyword:fragmentation:0.10.1'
+    //banner
+    compile 'com.youth.banner:banner:1.4.9'  //最新版本
+    //搜索
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    //time
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+    //eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //photoview
+    compile 'com.github.chrisbanes:PhotoView:1.3.0'
 }

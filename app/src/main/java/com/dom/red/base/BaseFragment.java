@@ -14,16 +14,19 @@ import com.dom.red.di.component.DaggerFragmentComponent;
 import com.dom.red.di.component.FragmentComponent;
 import com.dom.red.di.module.FragmentModule;
 
+import org.greenrobot.eventbus.EventBus;
+
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.yokeyword.fragmentation.SupportFragment;
 
 /**
  * Created by dom4j on 2017/3/7.
  */
 
-public abstract class BaseFragment<T extends BasePresenter> extends Fragment implements BaseView{
+public abstract class BaseFragment<T extends BasePresenter> extends SupportFragment implements BaseView{
     @Inject
     protected T mPresenter;
     protected View mView;

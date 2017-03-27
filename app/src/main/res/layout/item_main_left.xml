@@ -1,30 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:layout_height="wrap_content"
+    android:background="@mipmap/background">
 
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/my_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
-        android:src="@mipmap/r"
-        android:layout_marginLeft="30dp"
-        app:failureImageScaleType="centerInside"
-        app:placeholderImage="@mipmap/r"
-        app:roundAsCircle="true"
-        app:roundedCornerRadius="2dp"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="dom4j"
+        android:text="Red"
         android:textSize="20sp"
-        android:textColor="#ff0000"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"
+        android:textColor="#000"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一款纯阅读的App"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="50dp"
         android:layout_marginBottom="20dp"/>
 
-</LinearLayout>
+</RelativeLayout>

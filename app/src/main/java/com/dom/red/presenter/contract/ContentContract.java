@@ -2,8 +2,8 @@ package com.dom.red.presenter.contract;
 
 import com.dom.red.base.BasePresenter;
 import com.dom.red.base.BaseView;
-import com.dom.red.model.bean.DetailBean;
-import com.dom.red.model.bean.ExtraInfo;
+import com.dom.red.model.bean.zhihu.DetailBean;
+import com.dom.red.model.bean.zhihu.ExtraInfo;
 
 /**
  * Created by dom4j on 2017/3/10.

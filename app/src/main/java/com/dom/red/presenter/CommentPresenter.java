@@ -1,8 +1,8 @@
 package com.dom.red.presenter;
 
 import com.dom.red.base.RxPresenter;
-import com.dom.red.model.bean.LongCommentBean;
-import com.dom.red.model.bean.ShortCommentBean;
+import com.dom.red.model.bean.zhihu.LongCommentBean;
+import com.dom.red.model.bean.zhihu.ShortCommentBean;
 import com.dom.red.model.http.help.RetrofitHelper;
 import com.dom.red.model.http.help.RxHelper;
 import com.dom.red.model.http.help.Subscribe2Help;

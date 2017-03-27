@@ -16,20 +16,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/item_tv"
+            android:id="@+id/item_home_tv"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="@dimen/y100"
             android:padding="@dimen/x20"
-            android:textSize="@dimen/y20"
+            android:textSize="@dimen/y18"
             android:textColor="#000"
             android:text=""
             />
         <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/item_sdv"
+            android:id="@+id/item_home_sdv"
             android:layout_width="@dimen/x150"
             android:layout_height="@dimen/y120"
-            android:padding="@dimen/x20"/>
+            android:padding="@dimen/x20"
+            android:transitionName="shareView"
+            />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

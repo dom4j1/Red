@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sectionChild_parent"
+    android:orientation="vertical">
+    <include layout="@layout/view_toolbar"/>
+    <com.dom.red.ui.main.widget.RefreshRecyclerView
+        android:id="@+id/section_refreshView_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

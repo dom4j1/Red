@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="咨询">
+        <menu>
+            <group android:id="@+id/g6"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/theme_daily"
+                    android:icon="@mipmap/ic_drawer_zhihu"
+                    android:title="主题日报" />
+            </group>
 
-    <group android:id="@+id/group1"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/item_1"
-            android:title="首页" />
-    </group>
-
-    <group android:id="@+id/group6"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/item_6"
-            android:title="主题日报" />
-    </group>
+            <group android:id="@+id/g5"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/gank"
+                    android:icon="@mipmap/ic_drawer_gank"
+                    android:title="干货" />
+            </group>
 
 
-    <group android:id="@+id/group2"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/item_2"
-            android:title="版本升级" />
-    </group>
 
-    <group android:id="@+id/group3"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/item_3"
-            android:title="关于Red" />
-    </group>
+            <group android:id="@+id/group5"
+                android:checkableBehavior="single">
+            </group>
+        </menu>
+    </item>
 
-    <group android:id="@+id/group4"
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/item_4"
-            android:title="dom4j" />
-    </group>
+    <item android:title="娱乐">
+        <menu>
 
-    <group android:id="@+id/group5"
-        android:checkableBehavior="single">
-    </group>
+
+            <group android:id="@+id/g3"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/fuli"
+                    android:icon="@mipmap/ic_fuli"
+                    android:title="妹子福利" />
+            </group>
+
+
+
+            <group android:id="@+id/group4"
+                android:checkableBehavior="single">
+            </group>
+        </menu>
+
+    </item>
+
+    <item android:title="其他">
+        <menu>
+
+            <group android:id="@+id/g2"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/left_share"
+                    android:icon="@mipmap/ic_daily_share"
+                    android:title="分享" />
+            </group>
+
+            <group android:id="@+id/g1"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/about_red"
+                    android:icon="@mipmap/ic_drawer_about"
+                    android:title="关于J.Red" />
+            </group>
+        </menu>
+
+    </item>
 
 </menu>
