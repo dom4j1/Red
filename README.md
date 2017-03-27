@@ -23,6 +23,12 @@
 * 使用RecyclerView做列表数据展示<br>
 * 使用沉浸式布局做阅览,页面更美观
 * 使用通用Adapter做RecyclerView适配器,告别创建adapter的痛苦<br>
-* 详情请下载源码阅读
+* 详情请下载源码阅读<br>
+
+# 项目展示
+
+![image](httpsgithub.comdom4j1RedblobmastershowImagegif1.gif)<br>
+![image](httpsgithub.comdom4j1RedblobmastershowImagegif2.gif)<br> 
+![image](httpsgithub.comdom4j1RedblobmastershowImagegif3.gif)<br>   
  
   
