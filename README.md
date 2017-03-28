@@ -1,9 +1,9 @@
 # Red
 # 项目简介
 
-  J.Red 一款纯阅读类的App 基于MVP + Retrofit + RxJava + Dagger2 <br>
-  出于学习的目的制作了这款阅读类的App,借鉴了很多大神的作品,非常感谢大神们的开源精神<br>
-  项目使用了当前Android最流行的MVP框架进行开发,技术点几乎涉及到了目前Android所有的主流开发技术<br>
+   J.Red 一款纯阅读类的App 基于MVP + Retrofit + RxJava + Dagger2 <br>
+   出于学习的目的制作了这款阅读类的App,借鉴了很多大神的作品,非常感谢大神们的开源精神<br>
+   项目使用了当前Android最流行的MVP框架进行开发,技术点几乎涉及到了目前Android所有的主流开发技术<br>
   
   * 本项目还在测试阶段，发现bug或有好的建议欢迎issue、email(dom4j1464529456@163.com)<br>
   * IDE提示缺少Dagger开头的Class直接编译即可，会由Dagger2自动生成<br>
