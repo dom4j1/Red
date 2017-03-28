@@ -26,8 +26,10 @@
 # 项目展示
 
 ![image](https://github.com/dom4j1/Red/blob/master/showImage/gif1.gif)![image](https://github.com/dom4j1/Red/blob/master/showImage/gif2.gif) 
-![image](https://github.com/dom4j1/Red/blob/master/showImage/gif2.gif)<br> 
-![image](https://github.com/dom4j1/Red/blob/master/showImage/gif3.gif)<br>   
+![image](https://github.com/dom4j1/Red/blob/master/showImage/gif3.gif)![image](https://github.com/dom4j1/Red/blob/master/showImage/1.jpg)
+![image](https://github.com/dom4j1/Red/blob/master/showImage/2.jpg)![image](https://github.com/dom4j1/Red/blob/master/showImage/3.jpg)
+![image](https://github.com/dom4j1/Red/blob/master/showImage/4.jpg)![image](https://github.com/dom4j1/Red/blob/master/showImage/5.jpg)
+   
  
  
  
