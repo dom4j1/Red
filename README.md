@@ -48,7 +48,7 @@
 * [fragmentation](https://github.com/YoKeyword/Fragmentation)
 * [PhotoView](https://github.com/chrisbanes/PhotoView)<br>
 
-# [Download](https://fir.im/Red)
+# [点击我下载App进行体验 (*^__^*)](https://fir.im/Red)
  * 最后感谢GitHub上拥有开源精神的大神们,因为有你们才能让我们这些晚辈看的更远
  
  
