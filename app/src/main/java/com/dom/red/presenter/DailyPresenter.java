@@ -8,6 +8,7 @@ import com.dom.red.model.http.help.Subscribe2Help;
 import com.dom.red.presenter.contract.ZhiDailyContract;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 

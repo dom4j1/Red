@@ -3,8 +3,11 @@ package com.dom.red.model.http.help;
 import android.util.Log;
 
 import com.dom.red.base.RxPresenter;
+import com.dom.red.ui.zhihu.fragment.ZhihuDaily;
 import com.dom.red.util.SnakerbarUtil;
 import com.dom.red.util.ToastUtil;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.net.ConnectException;
 import java.net.SocketException;
@@ -44,6 +47,7 @@ public abstract class Subscribe2Help<T> implements Observer<T> {
             ToastUtil.showError("连接超时");
         }else if(throwable instanceof HttpException){
             ToastUtil.showError("请检查您的网络连接 稍后重试" + " =￣ω￣=");
+            ZhihuDaily.getInstance().onStopDialog(false);
         }
         Log.d("TAG"," exception : " +throwable);
     }

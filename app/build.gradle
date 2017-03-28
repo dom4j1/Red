@@ -73,4 +73,6 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     //photoview
     compile 'com.github.chrisbanes:PhotoView:1.3.0'
+    //dialog
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
 }

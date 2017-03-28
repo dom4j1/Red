@@ -23,7 +23,7 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 /**
- * Created by 姜鹏 on 2017/1/2.
+ * Created by dom4j on 2017/1/2.
  */
 
 public class ViewHolder extends RecyclerView.ViewHolder {

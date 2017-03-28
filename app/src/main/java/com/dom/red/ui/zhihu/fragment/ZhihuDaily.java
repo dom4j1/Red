@@ -3,6 +3,7 @@ package com.dom.red.ui.zhihu.fragment;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.NestedScrollView;
@@ -10,7 +11,9 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.dom.red.R;
@@ -27,6 +30,7 @@ import com.dom.red.util.CircularAnimUtil;
 import com.dom.red.util.Constants;
 import com.dom.red.util.SnakerbarUtil;
 import com.dom.red.util.TimeUtil;
+import com.github.ybq.android.spinkit.SpinKitView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -39,12 +43,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by dom4j on 2017/3/25.
  */
 
-public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDailyContract.View, SwipeRefreshLayout.OnRefreshListener,View.OnClickListener,ViewHolder.OnItemClickLisenter {
+public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDailyContract.View, SwipeRefreshLayout.OnRefreshListener, View.OnClickListener, ViewHolder.OnItemClickLisenter {
 
     @BindView(R.id.item_daily_banner)
     Banner mBanner;
@@ -60,6 +65,8 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
     TextView mTime;
     @BindView(R.id.item_daily_CoordinatorLayout)
     CoordinatorLayout mParentView;
+    @BindView(R.id.spin_kit)
+    SpinKitView mSpinkit;
 
     private CommonAdapter mAdapter;
 
@@ -68,6 +75,8 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
     private LinearLayoutManager mLinearLayoutManager;
     private List<HomeListBean.StoriesBean> mStories;
     private String mDate;
+
+    private static ZhihuDaily instance;
 
 
     @Override
@@ -83,6 +92,7 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
     @Override
     protected void initEventAndData() {
         EventBus.getDefault().register(this);
+        instance = this;
         mUrls = new ArrayList<>();
         mTitles = new ArrayList<>();
         mRecyclerView.setNestedScrollingEnabled(false);
@@ -134,11 +144,11 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
 
     @Override
     public void showBeforeList(HomeListBean data) {
-        mBanner.setVisibility(View.GONE);
         mTime.setText(TimeUtil.splitTime(data.getDate()));
         mStories = data.getStories();
         mAdapter.setDataList(mStories);
         mRecyclerView.setAdapter(mAdapter);
+        mSpinkit.setVisibility(View.GONE);
     }
 
     @Override
@@ -155,8 +165,12 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
     @Override
     public void onClick(View v) {
         Intent it = new Intent();
-        it.setClass(mContext,TimeActivity.class);
-        CircularAnimUtil.startActivity(mActivity,it,mFab,R.color.fab_bg);
+        it.setClass(mContext, TimeActivity.class);
+        CircularAnimUtil.startActivity(mActivity, it, mFab, R.color.fab_bg);
+    }
+
+    public static ZhihuDaily getInstance(){
+        return instance;
     }
 
     @Override
@@ -164,11 +178,10 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
         int id = mStories.get(position).getId();
         Intent intent = new Intent();
         intent.setClass(mContext, ContentActivity.class);
-        intent.putExtra(Constants.ID,id);
+        intent.putExtra(Constants.ID, id);
         ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(mActivity, shareView, "shareView");
-        mContext.startActivity(intent,options.toBundle());
+        mContext.startActivity(intent, options.toBundle());
     }
-
 
     public class OnScrllLisenter implements NestedScrollView.OnScrollChangeListener {
         @Override
@@ -183,18 +196,26 @@ public class ZhihuDaily extends BaseFragment<DailyPresenter> implements ZhiDaily
     }
 
     private void showSnakerbar() {
-        SnakerbarUtil.showShort(mParentView,getResources().getString(R.string.noData));
+        SnakerbarUtil.showShort(mParentView, getResources().getString(R.string.noData));
     }
-
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(String date) {
-        Log.d("request","开始请求");
+        mStories.clear();
+        mBanner.setVisibility(View.GONE);
+        mAdapter.setDataList(mStories);
+        mSpinkit.setVisibility(View.VISIBLE);
         mPresenter.getBeforeList(date);
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onStopDialog(boolean date) {
+        mSpinkit.setVisibility(View.GONE);
+    }
+
+
     @Override
-    public void onStop() {
-        super.onStop();
+    public void onDestroy() {
+        super.onDestroy();
         EventBus.getDefault().unregister(this);
     }
 }

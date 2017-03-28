@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.dom.red.R;
 import com.dom.red.base.SimpleActivity;
+import com.dom.red.ui.zhihu.fragment.ZhihuDaily;
 import com.dom.red.util.Constants;
 import com.dom.red.util.TimeUtil;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -68,6 +69,7 @@ public class TimeActivity extends SimpleActivity {
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(mTime);
+                //ZhihuDaily.getInstance().onMessageEvent(mTime);
                 finish();
             }
         });
