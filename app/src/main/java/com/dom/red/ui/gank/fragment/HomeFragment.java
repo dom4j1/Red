@@ -74,6 +74,7 @@ public class HomeFragment extends BaseFragment<HomeFragmentPresenter> implements
                     viewHodler.setimageResouse(R.id.iv_tech_icon,R.mipmap.ic_web);
                 }
                 viewHodler.setText(R.id.tv_tech_title,data.getDesc())
+                        .setText(R.id.tv_tech_author,data.getWho())
                         .setText(R.id.tv_tech_time, TimeUtil.formatDateTime(TimeUtil.subStandardTime(data.getPublishedAt()), true));
                 viewHodler.setOnItemClickLisenter(HomeFragment.this);
             }
