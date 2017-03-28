@@ -9,8 +9,6 @@
    [代码家/干货集中营](http://gank.io/api)<br>
  * 项目UI,框架借鉴于[GeekNews](https://github.com/codeestX/GeekNews) ,感谢大神的开源精神,受益匪浅
  
- 
- 
 # 技术要点
 * 整体框架使用MVP搭建 <br>
 * 使用RxJava及Retrofit2做网络请求<br>
@@ -27,8 +25,10 @@
 
 # 项目展示
 
-![image](https://github.com/dom4j1/Red/blob/master/showImage/gif1.gif)<br>
+![image](https://github.com/dom4j1/Red/blob/master/showImage/gif1.gif)![image](https://github.com/dom4j1/Red/blob/master/showImage/gif2.gif) 
 ![image](https://github.com/dom4j1/Red/blob/master/showImage/gif2.gif)<br> 
 ![image](https://github.com/dom4j1/Red/blob/master/showImage/gif3.gif)<br>   
+ 
+ 
  
   
